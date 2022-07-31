@@ -1,0 +1,174 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Orbitron&family=Rock+Salt&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/LivingRoom.css" asp-append-version="true" />
+</head>
+
+
+<body>
+
+    <style id="flashLight">
+        :root {
+            /* cursor: none;  */
+            --cursorXpos: 50vw;
+            --cursorYpos: 50vh;
+        }
+
+        :root::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: radial-gradient(circle 15rem at var(--cursorXpos) var(--cursorYpos),
+                    rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+            z-index: 11;
+
+            /* allows me to click through later onto elements behind it */
+            pointer-events: none;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="bulb">
+            <div class="filaments"></div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="bulb2">
+
+        </div>
+    </div>
+    <div class="container3">
+        <div class="bulb3">
+        </div>
+    </div>
+    <div class="container4">
+        <div class="bulb4">
+        </div>
+    </div>
+    <div class="container5">
+        <div class="bulb5">
+        </div>
+    </div>
+    <div class="container6">
+        <div class="bulb6">
+        </div>
+    </div>
+    <div class="container7">
+        <div class="bulb7">
+        </div>
+    </div>
+    <div class="container8">
+        <div class="bulb8">
+        </div>
+    </div>
+    <div class="container9">
+        <div class="bulb9">
+        </div>
+    </div>
+    <div class="container10">
+        <div class="bulb10">
+        </div>
+    </div>
+    <div class="container11">
+        <div class="bulb11">
+        </div>
+    </div>
+
+    <div class="form-popUp" id="popUp">
+        <form action="" class="form-container-popUp">
+            <h3>Automatic Flashlight Powers Activated!</h3>
+            <h4>I'm Glad I Have A Black Belt In Plot Armor.</h4>
+            <h4>I Should Go To The Basement And Fix The Lights.</h4>
+            <div class="d-flex justify-content-center gap-5 mt-3">
+                @* <button type="button" class="btn btn-danger" onclick="closepopUp()">Close</button> *@
+            </div>
+        </form>
+    </div>
+
+
+    @* this is for the bulbs pop up form *@
+    <button class="open-bulbs" onclick="openForm()"></button>
+    <div class="form-bulbs" id="form-bulbs">
+        <form action="" class="form-container-bulbs">
+            <h1>This Reminds Me Of Thing Will Would Always say</h1>
+            <h3 class="mt-4">"I tried to see the light but all i see is red..."</h3>
+            <h3>If I Think I Got It Right, I Should Try It! <br> If not, well maybe I should close this and figure it
+                out.</h3>
+
+            <input type="hidden" name="" id="bulbCode" value="">
+            <div class="d-flex justify-content-center gap-5 mt-3">
+                <button class="btn btn-warning" type="submit">Try It</button>
+                <button type="button" class="btn btn-danger cancel" onclick="closeFormBulbs()">Close</button>
+            </div>
+        </form>
+    </div>
+
+    @* this is for the safe to say no not yet *@
+    <button class="open-Safe" onclick="openForm()"></button>
+
+    @* this is for the book shelf to say focus on lights *@
+    <button class="open-button" onclick="openForm()"></button>
+    <div class="form-popup" id="bookName">
+        <form action="" class="form-container">
+            <h1>I Should Head To The Basement And Check The Circuit Breaker</h1>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+
+    <a asp-controller="Home" asp-action="Basement"><button class="basement-door"></button></a>
+    @* <div class="letters">
+        <h1>M</h1>
+        </div>
+        <div class="letters2">
+        <h1>I</h1>
+        </div>
+        <div class="letters3">
+        <h1>C</h1>
+        </div>
+        <div class="letters4">
+        <h1>H</h1>
+        </div>
+        <div class="letters5">
+        <h1>A</h1>
+        </div>
+        <div class="letters6">
+        <h1>E</h1>
+        </div>
+        <div class="letters7">
+        <h1>L</h1>
+        </div>
+        <div class="letters8">
+        <h1>C</h1>
+        </div>
+        <div class="letters9">
+        <h1>H</h1>
+        </div>
+        <div class="letters10">
+        <h1>O</h1>
+        </div>
+        <div class="letters11">
+        <h1>I</h1>
+        </div> *@
+    <audio src="~/assets/RainPump.mp3" type="audio/mpeg" autoplay loop></audio>
+    <script src="~/js/LivingRoomDark.js" asp-append-version="true"></script>
+</body>
+
+</html>
