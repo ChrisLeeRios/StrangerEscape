@@ -13,4 +13,4 @@ Difficult and scary!
 
 A thriller/puzzle solver that pays homage to the show Stranger Things! 
 
-<a href="https://strangerescape.azurewebsites.net/">Stranger Escape Website</a>
+<a href="https://thestrangerescape.azurewebsites.net/LoginandReg">Stranger Escape Website</a>
